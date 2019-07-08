@@ -249,10 +249,8 @@ static void handleDivremOverflowImpl(OverflowData *Data, ValueHandle LHS,
   ErrorType ET;
   if (RHSVal.isMinusOne())
     ET = ErrorType::SignedIntegerOverflow;
-  else if (Data->Type.isIntegerTy())
-    ET = ErrorType::IntegerDivideByZero;
   else
-    ET = ErrorType::FloatDivideByZero;
+    ET = ErrorType::IntegerDivideByZero;
 
   if (ignoreReport(Loc, Opts, ET))
     return;
