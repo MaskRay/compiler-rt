@@ -85,7 +85,7 @@ run_lint ${ASAN_RTL_LINT_FILTER} ${ASAN_RTL}/*.cpp \
                                  ${ASAN_RTL}/*.h &
 run_lint ${ASAN_TEST_LINT_FILTER} ${ASAN_RTL}/tests/*.cpp \
                                   ${ASAN_RTL}/tests/*.h &
-run_lint ${ASAN_LIT_TEST_LINT_FILTER} ${LIT_TESTS}/asan/*/*.cc &
+run_lint ${ASAN_LIT_TEST_LINT_FILTER} ${LIT_TESTS}/asan/*/*.cpp &
 
 # TSan
 TSAN_RTL=${COMPILER_RT}/lib/tsan
